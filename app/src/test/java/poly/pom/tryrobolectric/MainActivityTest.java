@@ -36,7 +36,7 @@ public class MainActivityTest {
 
     @Test
     public void shouldHaveTitle() throws Exception {
-        assertTrue(activity.getTitle().toString().equals(ResourceLocater.getString(R.string.app_name)));
 
+        assertThat(activity.getTitle().toString(),equalTo(RuntimeEnvironment.application.getString(R.string.app_name)));
     }
 }
