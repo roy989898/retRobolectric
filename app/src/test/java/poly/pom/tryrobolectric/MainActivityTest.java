@@ -10,6 +10,8 @@ import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
+import poly.pom.tryrobolectric.support.ResourceLocater;
+
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricGradleTestRunner.class)
@@ -34,7 +36,7 @@ public class MainActivityTest {
 
     @Test
     public void shouldHaveTitle() throws Exception {
-        assertTrue(activity.getTitle().toString().equals(RuntimeEnvironment.application.getString(R.string.app_name)));
+        assertTrue(activity.getTitle().toString().equals(ResourceLocater.getString(R.string.app_name)));
 
     }
 }
